@@ -1820,7 +1820,7 @@ ss.XhrUpload = {
         }
 
         headers['X-Requested-With'] = 'XMLHttpRequest';
-        headers['X-File-Name'] = fileObj.name;
+        headers['X-File-Name'] = encodeURIComponent( fileObj.name );
 
         if ( this._opts.responseType.toLowerCase() == 'json' ) {
             headers['Accept'] = 'application/json, text/javascript, */*; q=0.01';
